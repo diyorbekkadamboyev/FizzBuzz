@@ -1,28 +1,26 @@
 const elForm = document.querySelector("form");
 const elFormInput = document.querySelector(".form-control");
 const elBtn = document.querySelector(".btn");
-const textAge = document.querySelector(".answer")
+const textAge = document.querySelector(".answer");
 
 elForm.addEventListener("submit",function(evt){
     evt.preventDefault()
 
     const inputValue = elFormInput.value;
 
-    let  = inputValue;
+    const inputAge = function(valuesOne) {
 
-    const calacNumber1 = function(valuesOne) {
-    
-        if(valuesOne % 3 === 0) {
-            console.log("Fizz");
-        } else if(valuesOne % 5 === 0){
-            console.log("Buzz");
+        if((valuesOne % 3 === 0) && (valuesOne*1 > 0)) {
+            return "Fizz"
+        } else if((valuesOne % 5 === 0) && (valuesOne*1 > 0)){
+            return "Buzz"
+        } else if(valuesOne*1 === 0) {
+            return "Fizz Buzz"
         } else {
-            console.log(valuesOne); 
-        } 
+            return valuesOne
+        }
+        
     }
 
-    textAge.textContent = `${textValue}`;
-
-
-
+    textAge.textContent = `${inputAge(inputValue)}`
 })
