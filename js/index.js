@@ -10,11 +10,11 @@ elForm.addEventListener("submit",function(evt){
 
     const inputAge = function(valuesOne) {
 
-        if((valuesOne % 3 === 0) && (valuesOne*1 > 0)) {
+        if((valuesOne % 3 === 0) && (valuesOne % 15 > 0)) {
             return "Fizz"
-        } else if((valuesOne % 5 === 0) && (valuesOne*1 > 0)){
+        } else if((valuesOne % 5 === 0) && (valuesOne % 15 > 0)){
             return "Buzz"
-        } else if(valuesOne*1 === 0) {
+        } else if(valuesOne % 15 === 0) {
             return "Fizz Buzz"
         } else {
             return valuesOne
